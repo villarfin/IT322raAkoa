@@ -6,8 +6,8 @@
         <div>
             <h2 style="margin:0">{{ $user->name }}</h2>
             <div class="muted">Email: {{ $user->email }}</div>
-            <div class="muted">Number: {{ $user->number ?? '—' }}</div>
-            <div class="muted">Age: {{ $user->age ?? '—' }}</div>
+            <div class="muted">Number: {{ $user->number ?? 'N/A' }}</div>
+            <div class="muted">Age: {{ $user->age ?? 'N/A' }}</div>
         </div>
         <div style="display:flex;gap:8px">
             <a href="{{ route('users.edit', $user) }}" class="btn">Edit</a>
@@ -22,8 +22,8 @@
 
 <div class="card">
     <h3>Metadata</h3>
-    <div class="muted">Created: {{ $user->created_at->toDayDateTimeString() ?? '—' }}</div>
-    <div class="muted">Updated: {{ $user->updated_at->toDayDateTimeString() ?? '—' }}</div>
+    <div class="muted">Created: {{ $user->created_at->toDayDateTimeString() ?? 'N/A' }}</div>
+    <div class="muted">Updated: {{ $user->updated_at->toDayDateTimeString() ?? 'N/A' }}</div>
 </div>
 
 @endsection

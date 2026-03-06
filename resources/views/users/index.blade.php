@@ -13,8 +13,8 @@
         <div class="card">
             <h3 style="margin:0 0 6px 0">{{ $user->name }}</h3>
             <div class="muted">Email: {{ $user->email }}</div>
-            <div class="muted">Number: {{ $user->number ?? '—' }}</div>
-            <div class="muted">Age: {{ $user->age ?? '—' }}</div>
+            <div class="muted">Number: {{ $user->number ?? 'N/A' }}</div>
+            <div class="muted">Age: {{ $user->age ?? 'N/A' }}</div>
             <div style="margin-top:12px;display:flex;gap:8px">
                 <a href="{{ route('users.show', $user) }}" class="btn secondary">View</a>
                 <a href="{{ route('users.edit', $user) }}" class="btn">Edit</a>
